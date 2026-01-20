@@ -3,34 +3,42 @@
     display: flex;
 }
 
-/* Navbar Styles */
+/* Shared */
+.display-flex{
+    display:flex;
+}
+
+/* Navbar */
 .navbar{
     justify-content: space-between;
     align-items: center;
-    padding: 15px 60px;
+    padding: 18px 60px;
     max-width: 1400px;
     margin: 0 auto;
+    position: relative;
 }
 
 /* Background */
 .bg-color{
-    background-color: #412567;
+    background: linear-gradient(180deg, #1b1237, #120b2b);
 }
 
 /* Logo */
 .tech{
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
 }
 
 .wave{
-    color: #ff4ecd;
+    background: linear-gradient(90deg,#ffb86c,#ff4ecd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Nav links */
 .nav-link{
-    gap: 30px;
+    gap: 32px;
 }
 
 .nav-iteam{
@@ -39,34 +47,57 @@
 
 .nav-link a{
     text-decoration: none;
-    color: white;
+    color: #dcdcdc;
     font-size: 16px;
-    display: inline-block;
-}
-.about{
-    width: 47px;
-    height: 19px;
+    font-weight: 500;
 }
 
-.epi{
-    width: 70px;
-    height: 19px;
+.nav-link a:hover{
+    color:#ffffff;
 }
 
-.host{
-    width: 37px;
-    height: 19px;
-}
-
-/* Subscribe Button */
+/* Subscribe button */
 .subscribe{
-    background: linear-gradient(90deg, #ff4ecd, #ff9f1c);
+    background: linear-gradient(90deg,#ff4ecd,#ff9f1c);
     border: none;
-    padding: 8px 18px;
-    border-radius: 20px;
+    padding: 10px 22px;
+    border-radius: 22px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+.menu-icon{
+    display: none;
+    font-size: 26px;
     color: white;
     cursor: pointer;
-    font-size: 14px;
+}
+@media screen and (max-width: 768px){
+
+    .navbar{
+        padding: 15px 20px;
+    }
+
+    .nav-link{
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #120b2b;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    .subscribe{
+        display: none;
+    }
+
+    .menu-icon{
+        display: block;
+    }
 }
 /* First part */
 .hero{
